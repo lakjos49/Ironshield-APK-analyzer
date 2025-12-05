@@ -1,13 +1,13 @@
 # Ironshield-APK-analyzer
 
-# ** Android APK Malware Analyzer**
+#  Android APK Malware Analyzer
 
 A complete **static analysis and machine-learning–powered APK classification system** built using Flask, Scikit-Learn, TensorFlow, and multi-layer permission extraction pipelines.
 This tool automatically extracts permissions from APK files, performs feature engineering, applies multiple ML models, evaluates risk, visualizes results, and generates a full **PDF malware analysis report**.
 
 ---
 
-## ** Summary**
+##  Summary
 
 The APK Malware Analyzer is a web-based system that inspects Android applications for malicious behavior using static analysis and machine learning.
 It extracts explicit and implicit permissions, builds feature vectors, analyzes app legitimacy based on permission use, and classifies APKs using five machine-learning models (Random Forest, SVM, Logistic Regression, Gradient Boosting, and a Neural Network).
@@ -17,9 +17,9 @@ The analyzer also generates a **professional PDF report** containing risk scores
 
 ---
 
-## ** Key Features**
+##  Key Features
 
-### ** 1. Multi-Layer Permission Extraction**
+###  1. Multi-Layer Permission Extraction
 
 Supports multiple fallbacks:
 
@@ -35,7 +35,7 @@ Extracts:
 
 ---
 
-### ** 2. Machine Learning–Based Malware Classification**
+###  2. Machine Learning–Based Malware Classification
 
 Uses 5 classification models:
 
@@ -52,7 +52,7 @@ Combines model outputs to compute:
 
 ---
 
-### ** 3. Feature Ranking & Explainability**
+###  3. Feature Ranking & Explainability
 
 Computes importance scores using:
 
@@ -60,7 +60,7 @@ Computes importance scores using:
 * Relief-F
 * Correlation with class label
 
-Uses **Borda Count Fusion** to generate a unified ranking.
+Uses Borda Count Fusion to generate a unified ranking.
 
 Graphs auto-generated:
 
@@ -71,7 +71,7 @@ Graphs auto-generated:
 
 ---
 
-### ** 4. APK Type Identification & Permission Legitimacy**
+###  4. APK Type Identification & Permission Legitimacy
 
 Automatically identifies app category (e.g., Social Media, Navigation, Finance).
 Checks whether requested permissions are:
@@ -82,7 +82,7 @@ Checks whether requested permissions are:
 
 ---
 
-### ** 5. PDF Report Generation**
+###  5. PDF Report Generation
 
 The system generates a complete **malware analysis PDF report** including:
 
@@ -96,7 +96,7 @@ The system generates a complete **malware analysis PDF report** including:
 
 ---
 
-### ** 6. Flask Web Interface**
+###  6. Flask Web Interface
 
 Simple web-based interface with:
 
@@ -106,15 +106,15 @@ Simple web-based interface with:
 
 ---
 
-## ** Requirements**
+##  Requirements
 
-### **Python Version**
+### Python Version
 
 ```
 Python 3.8+
 ```
 
-### **Required Libraries**
+### Required Libraries
 
 Install dependencies using:
 
@@ -122,7 +122,7 @@ Install dependencies using:
 pip install -r requirements.txt
 ```
 
-### **Main Dependencies List**
+### Main Dependencies List
 
 ```
 Flask
@@ -138,7 +138,7 @@ skrebate
 reportlab
 ```
 
-### **System Requirements**
+### System Requirements
 
 * **Java** (for AXMLPrinter2)
 * Able to run Flask web server
@@ -146,7 +146,7 @@ reportlab
 
 ---
 
-## ** Running the Application**
+## Running the Application
 
 ```bash
 python app.py
@@ -162,7 +162,7 @@ Upload an APK → View analysis → Download PDF report.
 
 ---
 
-## ** Output Includes**
+##  Output Includes
 
 * Permission breakdown (explicit, implicit, excessive)
 * App type classification
