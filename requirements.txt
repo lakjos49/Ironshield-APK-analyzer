@@ -1,0 +1,11 @@
+Flask
+pandas
+numpy
+joblib
+tensorflow
+scikit-learn
+matplotlib
+apkutils2
+androguard
+skrebate
+reportlab
