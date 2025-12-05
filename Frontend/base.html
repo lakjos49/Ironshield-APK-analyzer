@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Android Malware Detection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div
+      class="running-header"
+      style="
+        width: 100%;
+        background: #111;
+        padding: 10px 0;
+        overflow: hidden;
+        color: #00eaff;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      "
+    >
+      <span id="ticker" style="white-space: nowrap">
+        MAJOR PROJECT: IRONSHIELD : ANDROID PACKAGE MANAGER [APK] ANALYZER
+        SYSTEM
+      </span>
+    </div>
+
+    <div class="info-box" onclick="toggleInfo()">how detection works</div>
+    <div id="infoPopup" class="info-popup">
+      <h3>APK Analysis Process</h3>
+      <p>
+        Permissions + App Behavior + ML Model Fusion = Final Threat Verdict.
+      </p>
+    </div>
+
+    <div class="card">
+      <h1>Android Malware Detection</h1>
+      <input type="file" id="apkFile" />
+      <button onclick="analyzeApk()">Analyze APK</button>
+    </div>
+
+    <footer
+      style="
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        background: #0d0d0d;
+        color: #b3b3cc; /* greyish royal */
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+      "
+    >
+      Supervisor: <b style="color: #d1d1ff">Dr. ARPITA JADHAV BHATT</b> |
+      Contributors: <b style="color: #d1d1ff">RAM PRATAP SINGH</b> |
+      <b style="color: #d1d1ff">LAKSHAY JOSHI</b> |
+      <b style="color: #d1d1ff">AANCHAL VERMA</b> |
+    </footer>
+
+    <div id="loaderOverlay" class="loader-overlay">
+      <div
+        class="tenor-gif-embed"
+        data-postid="22604801"
+        data-share-method="host"
+        data-aspect-ratio="1.5534"
+        data-width="200px"
+      ></div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+
+      <div id="loaderText">Loading 0%</div>
+    </div>
+
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span
+          class="close-btn"
+          onclick="closeModal()"
+          style="float: right; cursor: pointer; font-size: 28px; color: #00ffff"
+          >×</span
+        >
+
+        <h2 id="modalVerdict"></h2>
+
+        <div class="scroll-area">
+          <h3>Risk Label</h3>
+          <p id="modalLabel"></p>
+
+          <h3>App Type</h3>
+          <p id="modalAppType"></p>
+
+          <h3>Explicit Permissions (<span id="expCount"></span>)</h3>
+          <ul id="explicitList"></ul>
+
+          <h3>Implicit Permissions (<span id="impCount"></span>)</h3>
+          <ul id="implicitList"></ul>
+
+          <h3>Excessive Permissions (<span id="excessCount"></span>)</h3>
+          <ul id="excessList"></ul>
+
+          <h3>Model Confidence Scores</h3>
+          <ul id="modelScoreList"></ul>
+
+          <h3>Average Malware Score</h3>
+          <p id="avgScore"></p>
+
+          <h3>Threat Score Gauge</h3>
+          <div class="gauge-container">
+            <div class="gauge">
+              <div id="gaugeArc" class="arc"></div>
+              <div class="cover">
+                <div id="gaugeValue" class="value">0%</div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Top-5 Risky Permissions</h3>
+          <div id="riskyList"></div>
+
+          <h3>Visual Analysis</h3>
+          <img
+            id="chartModelScore"
+            style="width: 100%; border-radius: 8px; margin: 8px 0"
+          />
+          <img
+            id="chartPermissions"
+            style="width: 100%; border-radius: 8px; margin: 8px 0"
+          />
+          <img
+            id="chartRisk"
+            style="width: 100%; border-radius: 8px; margin: 8px 0"
+          />
+
+          <h3>Feature Selection</h3>
+          <img id="chartInfoGain" style="width: 100%; margin-top: 10px" />
+          <img id="chartReliefF" style="width: 100%; margin-top: 10px" />
+          <img id="chartBorda" style="width: 100%; margin-top: 10px" />
+
+          <button id="downloadBtn">Download PDF Report</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
